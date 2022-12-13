@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索</title>
+</head>
+<body>
+    <input id="myinput" type="text" value="">
+    <button id="mybtn">youtube検索</button>
+    <button id="mybtn2">google検索</button>
+    <button id="mybtn3">bing検索</button>
+
+    <script type="text/javascript">  
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const myInput = document.querySelector('#myinput');
+        const myBtn = document.querySelector('#mybtn');
+        const myBtn2 = document.querySelector('#mybtn2');
+        const myBtn3 = document.querySelector('#mybtn3');
+        myBtn.onclick = () => {
+            open ('https://www.youtube.com/results?search_query='+myInput.value);
+         }
+         myBtn2.onclick = () => {
+            open('https://www.google.co.jp/search?q='+myInput.value);
+         }
+         myBtn3.onclick = () => {
+            open('https://www.bing.com/search?q=' + myInput.value);
+         }
+        })
+    </script>
+</body>
+</html>
